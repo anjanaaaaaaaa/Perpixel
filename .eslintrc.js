@@ -7,4 +7,8 @@ module.exports = {
       rootDir: ["apps/*/"],
     },
   },
+  "eslint.workingDirectories": [
+    { directory: "client/", changeProcessCWD: true },
+    { directory: "server/", changeProcessCWD: true },
+  ],
 };
