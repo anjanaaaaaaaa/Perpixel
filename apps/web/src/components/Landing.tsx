@@ -9,10 +9,12 @@ import {
   useGLTF,
 } from "@react-three/drei";
 import { FlakesTexture } from "three/examples/jsm/textures/FlakesTexture";
+import Masque from "./Masque";
 
 export default function Landing() {
   return (
     <Canvas shadows camera={{ position: [8, 1.5, 8], fov: 25 }}>
+      <Masque />
       <Suzi rotation={[-0.63, 0, 0]} scale={2} position={[0, -1.175, 0]} />
       <AccumulativeShadows
         temporal
