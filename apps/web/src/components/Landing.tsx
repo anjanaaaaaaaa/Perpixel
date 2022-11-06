@@ -13,9 +13,10 @@ import Masque from "./Masque";
 
 export default function Landing() {
   return (
-    <Canvas shadows camera={{ position: [8, 1.5, 8], fov: 25 }}>
+    <Canvas shadows camera={{ position: [-20, 0, 50], fov: 30 }}>
+      <axesHelper />
       <Masque />
-      <Suzi rotation={[-0.63, 0, 0]} scale={2} position={[0, -1.175, 0]} />
+      <Suzi rotation={[-0.63, 0, 0]} scale={1.5} position={[-1, -0.56, 0]} />
       <AccumulativeShadows
         temporal
         frames={100}
@@ -40,15 +41,23 @@ export default function Landing() {
         <sphereGeometry args={[0.25, 64, 64]} />
         <meshStandardMaterial color="lightblue" />
       </mesh>
-      <mesh
+      <mesh castShadow position={[1, -0.245, 1]}>
+        <sphereGeometry args={[0.25, 64, 64]} />
+        <meshStandardMaterial color="blue" />
+      </mesh>
+      <mesh castShadow position={[0.5, -0.245, 2]}>
+        <sphereGeometry args={[0.25, 64, 64]} />
+        <meshStandardMaterial color="red" />
+      </mesh>
+      {/* <mesh
         castShadow
         position={[2.5, -0.24, 1]}
         rotation={[0, Math.PI / 4, 0]}
       >
         <boxGeometry args={[0.5, 0.5, 0.5]} />
         <meshStandardMaterial color="indianred" />
-      </mesh>
-      <OrbitControls autoRotate={false} />
+      </mesh> */}
+      <OrbitControls autoRotate={true} />
       <Environment preset="city" />
     </Canvas>
   );

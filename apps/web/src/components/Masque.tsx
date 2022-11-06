@@ -38,7 +38,7 @@ function Text3d() {
       </Text3D> */}
       <textGeometry
         attach="geometry"
-        args={["test", { font, size: 5, height: 1 }]}
+        args={["masque", { font, size: 5, height: 1 }]}
       />
       <meshStandardMaterial attach="material" color="hotpink" />
     </mesh>
