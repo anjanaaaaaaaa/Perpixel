@@ -17,11 +17,11 @@ export default function Landing() {
       <AccumulativeShadows
         temporal
         frames={100}
-        color="orange"
+        color="purple"
         colorBlend={2}
         toneMapped={true}
         alphaTest={0.9}
-        opacity={2}
+        opacity={0.8}
         scale={12}
         position={[0, -0.5, 0]}
       >

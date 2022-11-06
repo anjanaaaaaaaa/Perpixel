@@ -5,7 +5,7 @@ import Landing from "../components/Landing";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen ">
+    <div className="h-screen bg-[#9620da]">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
